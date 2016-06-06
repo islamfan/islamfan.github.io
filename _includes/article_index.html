@@ -38,11 +38,6 @@
             {% endif %}
         {% endif %}
     {% endif %}
-    {% if post.category %}
-        <span class="category">
-            {{ post.category }}
-        </span>
-    {% endif %}
     <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}">
         <h1>{{ post.title }}</h1>
     </a>
