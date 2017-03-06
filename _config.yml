@@ -1,123 +1,261 @@
-name: Islamfan
-description: 
-url: #place url
-gems: [jekyll-paginate]
-baseurl: #place folder name if site is served in subfolder
-permalink: /:title/
-paginate: 8
-paginate_path: /page/:num/
-infinite_scroll: true #change to false if you want to use pagination
-tag_dir: /tag
-category_dir: /category
-author_dir: /author
-author_title_prefix: 'Posted by '
-media_folder: /img
-author_default_avatar: /profile-pic.jpg
-search: 
-tumblr: 
-pinterest: 
-instagram: 
-twitter: 
-facebook: "https://www.facebook.com/islaminweb/"
-youtube: 
-vimeo: 
-soundcloud: 
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your entire site, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# `jekyll serve`. If you change this file, please restart the server process.
 
-encoding: utf-8
-defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-      type: "standard"
-      homedisplay: "featimg"
+# Site Settings
+locale                   : "en_US"
+title                    : "Islam"
+title_separator          : "-"
+name                     : Islam
+description              : Islam news
+url                      : http://www.islamfan.com # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl                  : # the subpath of your site, e.g. "/blog"
+gh_repo                  :
+teaser                   : # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
+# breadcrumbs            : false # true, false (default)
+words_per_minute         : 200
+comments:
+  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", custom"
+  disqus:
+    shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+  discourse:
+    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
+  facebook:
+    # https://developers.facebook.com/docs/plugins/comments
+    appid                :
+    num_posts            : # 5 (default)
+    colorscheme          : # "light" (default), "dark"
+
+# SEO Related
+google_site_verification :
+bing_site_verification   :
+alexa_site_verification  :
+yandex_site_verification :
+
+# Social Sharing
+twitter:
+  username               : 
+facebook:
+  username               : sheikh.ahmed.deedat.hoosen
+  app_id                 :
+  publisher              :
+og_image                 : # Open Graph/Twitter default site image
+# For specifying social profiles
+# - https://developers.google.com/structured-data/customize/social-profiles
+social:
+  type                   : # Person or Organization (defaults to Person)
+  name                   : # If the user or organization name differs from the site's name
+  links: # An array of links to social media profiles
+    - "https://facebook.com/sheikh.ahmed.deedat.hoosen"
+
+
+# Analytics
+analytics:
+  provider               : 
+  google:
+    tracking_id          : 
+
+# Google AdSense
+google_ad_client         :
+google_ad_slot           :
+
+# Site Author
+author:
+  name             : 
+  avatar           : 
+  bio              : 
+  location         : 
+  email            :
+  uri              :
+  bitbucket        :
+  codepen          :
+  dribbble         :
+  flickr           :
+  facebook         :
+  foursquare       :
+  github           :
+  google_plus      :
+  keybase          :
+  instagram        :
+  lastfm           :
+  linkedin         :
+  pinterest        :
+  soundcloud       :
+  stackoverflow    : # http://stackoverflow.com/users/123456/username
+  steam            :
+  tumblr           :
+  twitter          :
+  vine             :
+  weibo            :
+  xing             :
+  youtube          :
+
+
+
+
+# Reading Files
+include:
+  - .htaccess
+  - _pages
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/plugins
+  - assets/js/_main.js
+  - assets/js/vendor
+  - Capfile
+  - CHANGELOG
+  - config
+  - Gemfile
+  - Gruntfile.js
+  - gulpfile.js
+  - LICENSE
+  - log
+  - node_modules
+  - package.json
+  - Rakefile
+  - README
+  - tmp
+keep_files:
+  - .git
+  - .svn
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+
+# Conversion
 markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+
+# Markdown Processing
 kramdown:
   input: GFM
-  syntax_highlighter: rouge
-relative_permalinks: false
-exclude: [.git, .gitignore, sass, .sass-cache, package.json, gruntfile.js, node_modules, README.md]
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
 
-# prose.io configurations
-prose:
-  media: "img"
-  metadata:
-    _posts:
-      - name: "title"
-        field:
-          element: "text"
-          label: "title"
-      - name: "layout"
-        field:
-          element: "select"
-          label: "Layout"
-          help: "display post at full width or with sidebar"
-          options:
-            - name: "with sidebar"
-              value: "post"
-            - name: "full width"
-              value: "post_full"
-      - name: "author"
-        field:
-          element: "text"
-          label: "Author"
-          help: "author id as defined within _data/authors.yml"
-          type: "text"
-      - name: "featimg"
-        field:
-          element: "text"
-          label: "Featured Image"
-          help: "featured image within the img-folder"
-          type: "text"
-      - name: "type"
-        field:
-          element: "select"
-          label: "Post Type"
-          help: "each type has some special feature"
-          options:
-            - name: "Standard"
-              value: "standard"
-            - name: "Image"
-              value: "image"
-            - name: "Gallery"
-              value: "gallery"
-            - name: "Audio"
-              value: "audio"
-            - name: "YouTube"
-              value: "youtube"
-            - name: "Vimeo"
-              value: "vimeo"
-      - name: "homedisplay"
-        field:
-          element: "select"
-          label: "Home Display"
-          help: "decide whether to display embedded element (for post types: audio, youtube, vimeo) or Featured Image on home page"
-          options:
-            - name: "Featured Image"
-              value: "featimg"
-            - name: "Embedded Element"
-              value: "iframe"
-      - name: "vimeo-embed"
-        field:
-          element: "text"
-          label: "Vimeo Embedding Code"
-          help: "Set post type to vimeo in order for this to work"
-      - name: "gallery-id"
-        field:
-          element: "text"
-          label: "Gallery ID"
-          help: "ID of the gallery defined within _data/galleries.yml - use include in content to use"
-      - name: "audio-embed"
-        field:
-          element: "text"
-          label: "Audio Embedding Code"
-          help: "Set post type to audio in order for this to work"
-      - name: "yt-video-id"
-        field:
-          element: "text"
-          label: "YouTube Video ID"
-          help: "Set post type to youtube in order for this to work. Do not set featured image, as the youtube video thumbnail will be used"
-          type: "text"
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: false
+      read_time: false
+      comments: false
+      share: true
+      related: true
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: false
+  
+  
+# Outputting
+permalink: /:title/
+paginate: 12 # amount of posts to show
+paginate_path: /page:num/
+timezone: America/New_York # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
+
+# Plugins
+gems:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-seo-tag
+
+# mimic GitHub Pages with --safe
+whitelist:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+
+
+# Archives
+#  Type
+#  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
+#  - Jekyll Archives plugin archive pages ~> type: jekyll-archives
+#  Path (examples)
+#  - Archive page should exist at path when using Liquid method or you can
+#    expect broken links (especially with breadcrumbs enabled)
+#  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
+#  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
+#  - <base_path/my-awesome-category/index.html ~> path: /
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+# https://github.com/jekyll/jekyll-archives
+# jekyll-archives:
+#   enabled:
+#     - categories
+#     - tags
+#   layouts:
+#     category: archive-taxonomy
+#     tag: archive-taxonomy
+#   permalinks:
+#     category: /categories/:name/
+#     tag: /tags/:name/
+
+
+# HTML Compression
+# - http://jch.penibelst.de/
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
+ 
+
+
+
+
+# From Gridster
+#infinite_scroll: true #change to false if you want to use pagination
+
+# when i remove this line & run *bundle exec jekyll build*  i get error *Liquid Exception: No repo name found. Specify using
+#PAGES_REPO_NWO environment variables*
+gems: [jekyll-paginate] 
+
+#tag_dir: /tag
+#category_dir: /category
+#author_dir: /author
+#author_title_prefix: 'Posted by '
+#media_folder: /media/compressed
+#author_default_avatar: /profile-pic.jpg
+
+#google_analytics_id: 'UA-27643502-1'
+#tumblr: "#"
+#pinterest: "#"
+#instagram: "#"
+#twitter: "#"
+#facebook: "https://www.facebook.com/aamslm/"
+#youtube: "#"
+#vimeo: "#"
+#soundcloud: "#"
