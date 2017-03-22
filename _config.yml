@@ -10,7 +10,7 @@ locale                   : "en_US"
 title                    : "Islam"
 title_separator          : "-"
 name                     : Islam
-description              : Islam news
+description              : All about Islam
 url                      : https://www.islamfan.com # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 gh_repo                  :
