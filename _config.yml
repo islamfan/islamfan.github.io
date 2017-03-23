@@ -7,9 +7,9 @@
 
 # Site Settings
 locale                   : "en_US"
-title                    : "Islam"
+title                    : Islam
 title_separator          : "-"
-name                     : Islam
+name                     : Islam Fan
 description              : All about Islam
 url                      : https://www.islamfan.com # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
