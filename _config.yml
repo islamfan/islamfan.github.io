@@ -241,7 +241,7 @@ compress_html:
 
 # when i remove this line & run *bundle exec jekyll build*  i get error *Liquid Exception: No repo name found. Specify using
 #PAGES_REPO_NWO environment variables*
-gems: [jekyll-paginate] 
+#gems: [jekyll-paginate] 
 
 #tag_dir: /tag
 #category_dir: /category
@@ -250,7 +250,6 @@ gems: [jekyll-paginate]
 #media_folder: /media/compressed
 #author_default_avatar: /profile-pic.jpg
 
-#google_analytics_id: 'UA-27643502-1'
 #tumblr: "#"
 #pinterest: "#"
 #instagram: "#"
